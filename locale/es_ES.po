@@ -1,0 +1,67 @@
+# 
+msgid ""
+msgstr "Content-Type: text/plain; charset=utf-8\n"
+
+msgctxt "field:carrier.api,subdivisions:"
+msgid "Subdivisions"
+msgstr "Subdivisiones"
+
+msgctxt "field:carrier.api.subdivision.report,active:"
+msgid "Active"
+msgstr "Activo"
+
+msgctxt "field:carrier.api.subdivision.report,api:"
+msgid "Carrier API"
+msgstr "API transportista"
+
+msgctxt "field:carrier.api.subdivision.report,create_date:"
+msgid "Create Date"
+msgstr "Fecha creación"
+
+msgctxt "field:carrier.api.subdivision.report,create_uid:"
+msgid "Create User"
+msgstr "Usuario creación"
+
+msgctxt "field:carrier.api.subdivision.report,directory:"
+msgid "Directory"
+msgstr "Directorio"
+
+msgctxt "field:carrier.api.subdivision.report,id:"
+msgid "ID"
+msgstr "ID"
+
+msgctxt "field:carrier.api.subdivision.report,rec_name:"
+msgid "Name"
+msgstr "Nombre"
+
+msgctxt "field:carrier.api.subdivision.report,subdivision:"
+msgid "Subdivision"
+msgstr "Subdivisión"
+
+msgctxt "field:carrier.api.subdivision.report,write_date:"
+msgid "Write Date"
+msgstr "Fecha modificación"
+
+msgctxt "field:carrier.api.subdivision.report,write_uid:"
+msgid "Write User"
+msgstr "Usuario modificación"
+
+msgctxt "help:carrier.api.subdivision.report,directory:"
+msgid "Directory name (without \"/\")"
+msgstr "Nombre del directorio (sin \"/\")"
+
+msgctxt "model:carrier.api.subdivision.report,name:"
+msgid "Carrier API Subdivision Report"
+msgstr "API transportista subdivisión informe"
+
+msgctxt "view:carrier.api.subdivision.report:"
+msgid "Company Subdivision Report"
+msgstr "Informe subdivisión empresa"
+
+msgctxt "view:carrier.api.subdivision.report:"
+msgid "Company Subdivision Reports"
+msgstr "Informes subdivisión empresa"
+
+msgctxt "view:carrier.api:"
+msgid "Subdivisions"
+msgstr "Subdivisiones"

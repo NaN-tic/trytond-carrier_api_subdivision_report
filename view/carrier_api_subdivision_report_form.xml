@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<!-- This file is part carrier_api_subdivision_report module for Tryton.
+The COPYRIGHT file at the top level of this repository contains the full copyright notices and license terms. -->
+<form string="Company Subdivision Report">
+    <label name="subdivision"/>
+    <field name="subdivision"/>
+    <label name="directory"/>
+    <field name="directory"/>
+    <label name="active"/>
+    <field name="active"/>
+    <label name="api"/>
+    <field name="api"/>
+</form>

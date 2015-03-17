@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<!-- This file is part carrier_api_subdivision_report module for Tryton.
+The COPYRIGHT file at the top level of this repository contains the full copyright notices and license terms. -->
+<tryton>
+    <data>
+        <!-- Carrier API -->
+        <record model="ir.ui.view" id="carrier_api_form">
+            <field name="model">carrier.api</field>
+            <field name="inherit" ref="carrier_api.carrier_api_form"/>
+            <field name="name">carrier_api_form</field>
+        </record>
+
+        <!-- Carrier API Subdivision Report -->
+        <record model="ir.ui.view" id="carrier_api_subdivision_report_view_form">
+            <field name="model">carrier.api.subdivision.report</field>
+            <field name="type">form</field>
+            <field name="name">carrier_api_subdivision_report_form</field>
+        </record>
+        <record model="ir.ui.view" id="carrier_api_subdivision_report_view_tree">
+            <field name="model">carrier.api.subdivision.report</field>
+            <field name="type">tree</field>
+            <field name="name">carrier_api_subdivision_report_tree</field>
+        </record>
+
+        <!-- access -->
+        <record model="ir.model.access" id="access_carrier_api_subdivision_report">
+            <field name="model" search="[('model', '=', 'carrier.api.subdivision.report')]"/>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="False"/>
+            <field name="perm_create" eval="False"/>
+            <field name="perm_delete" eval="False"/>
+        </record>
+        <record model="ir.model.access" id="access_carrier_api_subdivision_report_admin">
+            <field name="model" search="[('model', '=', 'carrier.api.subdivision.report')]"/>
+            <field name="group" ref="res.group_admin"/>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="True"/>
+            <field name="perm_create" eval="True"/>
+            <field name="perm_delete" eval="True"/>
+        </record>
+    </data>
+</tryton>
