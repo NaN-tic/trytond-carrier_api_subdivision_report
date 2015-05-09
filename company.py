@@ -23,19 +23,19 @@ class CompanySubdivision:
         if not os.path.isdir(directory):
             os.makedirs(directory)
  
-    @staticmethod
-    def carrier_api_directory(data):
-        '''Return report directory (full path) from user subdivision'''
+    @classmethod
+    def carrier_api_directory(cls, api):
+        '''Return report directory from user subdivision and api'''
         pool = Pool()
-        CarrierApiSubdivisionReport  = pool.get('carrier.api.subdivision.report')
         User = pool.get('res.user')
+        CarrierApiSubdivisionReport  = pool.get('carrier.api.subdivision.report')
 
         report_directory = None
 
         user = User(Transaction().user)
         if user.subdivision:
             subdivision_reports = CarrierApiSubdivisionReport.search([
-                ('api', '=', data.get('api_id')),
+                ('api', '=', api.id),
                 ('subdivision', '=', user.subdivision),
                 ], limit=1)
             if not subdivision_reports:
@@ -43,12 +43,6 @@ class CompanySubdivision:
             subdivision_report, = subdivision_reports
 
             if subdivision_report.directory:
-                directory = subdivision_report.directory
-                # create directory
-                cursor = Transaction().cursor
-                report_directory = os.path.join(config.get('database', 'path'),
-                    cursor.database_name, "reports", directory)
-                if not os.path.isdir(report_directory):
-                    os.makedirs(report_directory)
+                report_directory = subdivision_report.directory
 
         return report_directory
