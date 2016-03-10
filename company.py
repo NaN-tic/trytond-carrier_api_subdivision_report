@@ -17,9 +17,9 @@ class CompanySubdivision:
     def __register__(cls, module_name):
         super(CompanySubdivision, cls).__register__(module_name)
         # create directory
-        cursor = Transaction().cursor
+        database_name = Transaction().database.name
         directory = os.path.join(config.get('database', 'path'),
-            cursor.database_name, "reports")
+            database_name, "reports")
         if not os.path.isdir(directory):
             os.makedirs(directory)
  
