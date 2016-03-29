@@ -5,10 +5,10 @@ from trytond.model import ModelView, ModelSQL, fields
 from trytond.pool import PoolMeta
 
 __all__ = ['CarrierApi', 'CarrierApiSubdivisionReport']
-__metaclass__ = PoolMeta
 
 
 class CarrierApi:
+    __metaclass__ = PoolMeta
     __name__ = 'carrier.api'
     subdivisions = fields.One2Many('carrier.api.subdivision.report', 'api',
         'Subdivisions')

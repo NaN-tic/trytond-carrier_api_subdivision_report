@@ -7,10 +7,10 @@ from trytond.config import config
 import os
 
 __all__ = ['CompanySubdivision']
-__metaclass__ = PoolMeta
 
 
 class CompanySubdivision:
+    __metaclass__ = PoolMeta
     __name__ = "company.subdivision"
 
     @classmethod
